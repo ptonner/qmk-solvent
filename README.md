@@ -1,4 +1,4 @@
-# Solvent QMK
+# solvent keyboard layout
 
 ## Setup
 
@@ -6,6 +6,10 @@
 nix develop
 qmk setup
 ```
+
+## Sources
+- [flow-style oneshot](https://github.com/daliusd/qmk_firmware/tree/32136bb917ef3f936e78ca123c6939ebd9db98ac/keyboards/a_dux/keymaps/daliusd)
+- [miryoku layout](https://github.com/manna-harbour/miryoku_qmk/tree/df1690ad257e7b0d1bf9450258f7baebfee7be9a)
 
 # QMK Userspace
 

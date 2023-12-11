@@ -20,30 +20,49 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
-
-/* Select hand configuration */
-
 #define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
 
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
+// Flow
+#define FLOW_COUNT 7
+#define FLOW_LAYERS_COUNT 1
 
-#ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_EFFECT_BREATHING
-    #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-    #define RGBLIGHT_EFFECT_SNAKE
-    #define RGBLIGHT_EFFECT_KNIGHT
-    #define RGBLIGHT_EFFECT_CHRISTMAS
-    #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-    #define RGBLIGHT_EFFECT_RGB_TEST
-    #define RGBLIGHT_EFFECT_ALTERNATING
-    #define RGBLIGHT_EFFECT_TWINKLE
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
-#endif
+// Oneshot
+// #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
+// #define ONESHOT_TIMEOUT 1500  /* Time (in ms) before the one shot key is released */
+
+// Keys
+
+#define LT_MED LT(MED,KC_ESC)
+#define LT_NAV LT(NAV,KC_SPC)
+#define LT_MOU LT(MOU,KC_TAB)
+#define LT_SYM LT(SYM,KC_ENT)
+#define LT_NUM LT(NUM,KC_BSPC)
+#define LT_FUN LT(FUN,KC_DEL)
+
+#define XXX XXXXXXX
+
+// Tapping
+#define TAPPING_TERM 200
+
+// Prevent normal rollover on alphas from accidentally triggering mods.
+// #define IGNORE_MOD_TAP_INTERRUPT
+
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define QUICK_TAP_TERM 0
+
+// Auto Shift
+#define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+#define AUTO_SHIFT_NO_SETUP
+
+// Mouse key speed and acceleration.
+#undef MOUSEKEY_DELAY
+#define MOUSEKEY_DELAY          0
+#undef MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL       16
+#undef MOUSEKEY_WHEEL_DELAY
+#define MOUSEKEY_WHEEL_DELAY    0
+#undef MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED      8
+#undef MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX    32
