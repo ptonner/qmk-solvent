@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 // Flow
-#define FLOW_COUNT 7
+#define FLOW_COUNT 12
 #define FLOW_LAYERS_COUNT 1
 
 // Oneshot
@@ -31,6 +31,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define ONESHOT_TIMEOUT 1500  /* Time (in ms) before the one shot key is released */
 
 // Keys
+
+#define L_MED MO(MED)
+#define L_NAV MO(NAV)
+#define L_MOU MO(MOU)
+#define L_SYM MO(SYM)
+#define L_NUM MO(NUM)
+#define L_FUN MO(FUN)
 
 #define LT_MED LT(MED,KC_ESC)
 #define LT_NAV LT(NAV,KC_SPC)
