@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 // Flow
-#define FLOW_COUNT 12
+#define FLOW_COUNT 24
 #define FLOW_LAYERS_COUNT 6
 
 // Oneshot
@@ -31,25 +31,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define ONESHOT_TIMEOUT 1500  /* Time (in ms) before the one shot key is released */
 
 // Keys
-
-#define L_MED MO(MED)
-#define L_NAV MO(NAV)
-#define L_MOU MO(MOU)
-#define L_SYM MO(SYM)
-#define L_NUM MO(NUM)
-#define L_FUN MO(FUN)
-
-#define LT_MED LT(MED,KC_ESC)
-#define LT_NAV LT(NAV,KC_SPC)
-#define LT_MOU LT(MOU,KC_TAB)
-#define LT_SYM LT(SYM,KC_ENT)
-#define LT_NUM LT(NUM,KC_BSPC)
-#define LT_FUN LT(FUN,KC_DEL)
-
 #define XXX XXXXXXX
 
 // Tapping
-#define TAPPING_TERM 200
+#define TAPPING_TERM 0
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
 // #define IGNORE_MOD_TAP_INTERRUPT

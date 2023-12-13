@@ -61,20 +61,35 @@ enum custom_keycodes {
 // * modifier keycode
 const uint16_t flow_config[FLOW_COUNT][2] = {
 
-    {L_NUM, KC_LGUI},
-    {L_NUM, KC_LALT},
-    {L_NUM, KC_LCTL},
-    {L_NUM, KC_LSFT},
+    {OS_MED, KC_LGUI},
+    {OS_MED, KC_LALT},
+    {OS_MED, KC_LCTL},
+    {OS_MED, KC_LSFT},
 
-    {L_NAV, KC_LGUI},
-    {L_NAV, KC_LALT},
-    {L_NAV, KC_LCTL},
-    {L_NAV, KC_LSFT},
+    {OS_NAV, KC_LGUI},
+    {OS_NAV, KC_LALT},
+    {OS_NAV, KC_LCTL},
+    {OS_NAV, KC_LSFT},
 
-    {L_SYM, KC_LGUI},
-    {L_SYM, KC_LALT},
-    {L_SYM, KC_LCTL},
-    {L_SYM, KC_LSFT},
+    {OS_MOU, KC_LGUI},
+    {OS_MOU, KC_LALT},
+    {OS_MOU, KC_LCTL},
+    {OS_MOU, KC_LSFT},
+
+    {OS_SYM, KC_LGUI},
+    {OS_SYM, KC_LALT},
+    {OS_SYM, KC_LCTL},
+    {OS_SYM, KC_LSFT},
+
+    {OS_NUM, KC_LGUI},
+    {OS_NUM, KC_LALT},
+    {OS_NUM, KC_LCTL},
+    {OS_NUM, KC_LSFT},
+
+    {OS_FUN, KC_LGUI},
+    {OS_FUN, KC_LALT},
+    {OS_FUN, KC_LCTL},
+    {OS_FUN, KC_LSFT},
 
 };
 
@@ -177,24 +192,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      XXX, KC_F11, KC_F4, KC_F5, KC_F6, KC_SCRL, XXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, XXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     XXX, KC_F10, KC_F1, KC_F2, KC_F3, KC_PAUS, XXX,              XXX,    XXX, KC_ALGR, XXX, XXX,
+     XXX, KC_F10, KC_F1, KC_F2, KC_F3, KC_PAUS, XXX, KC_ENT, KC_BSPC, KC_DEL, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
 	KC_APP, KC_SPC, KC_TAB, KC_ENT, KC_BSPC, KC_DEL
                                       //`--------------------------'  `--------------------------'
     ),
 
-    // NOTE: this is currently included just to enable compilation
-    // with flow layers, which require at least one to avoid compile
-    // time errors
-    [MISC] = LAYOUT_split_3x6_3(
-  //┌────────┬────────┬────────┬────────┬────────┐                         ┌────────┬────────┬────────┬────────┬────────┐
-     XXXXXXX  ,XXX   ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX , KC_BRID ,KC_BRIU ,KC_PSCR ,XXXXXXX ,XXX , XXXXXXX,
-  //├────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX  ,XXXXXXX ,XXXXXXX ,XXX   ,  XXX,XXXXXXX ,                 XXXXXXX  ,KC_MPRV ,KC_MPLY ,KC_MNXT ,XXXXXXX ,XXX ,
-  //├────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┤
-     XXXXXXX  ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,                 XXXXXXX  ,KC_VOLD ,KC_VOLU ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-  //└────────┴────────┴────────┴────┬───┴────┬───┼────────┐       ┌────────┼───┬────┴───┬────┴────────┴────────┴────────┘
-                            XXXXXXX  ,XXXXXXX ,    XXXXXXX ,        XXXXXXX ,    XXXXXXX, XXXXXXX
-  //                                └────────┘   └────────┘       └────────┘   └────────┘
-  )
 };
