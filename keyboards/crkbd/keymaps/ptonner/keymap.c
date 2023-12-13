@@ -104,18 +104,14 @@ void matrix_scan_user(void) {
 
 // NOTE: miryoku thumbs:
 // LT(U_MEDIA,KC_ESC),LT( XXXV,KC_SPC),LT(U_MOUSE,KC_TAB), LT(U_SYM,KC_ENT),LT(U_NUM,KC_BSPC),LT(U_FUN,KC_DEL)
-// KC_ESC,KC_SPC,KC_TAB, KC_ENT,KC_BSPC,KC_DEL
+// KC_ESC, KC_SPC, KC_TAB, KC_ENT, KC_BSPC, KC_DEL
 
 // Keymap
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [DEF] = LAYOUT_split_3x6_3(
-  //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P,  XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
-  //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                            OS_MED,  OS_NAV,  OS_MOU,     OS_SYM,  OS_NUM,  OS_FUN
                                       //`--------------------------'  `--------------------------'
   ),
@@ -126,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      XXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXX, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     XXX, XXX, KC_ALGR, XXX, XXX, XXX, XXX, XXX, XXX, XXX, OU_AUTO, XXX,
+     XXX, XXX, KC_ALGR, KC_ESC, KC_SPC, KC_TAB, XXX, XXX, XXX, XXX, OU_AUTO, XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
      KC_ESC,KC_SPC,KC_TAB, KC_MSTP, KC_MPLY, KC_MUTE
                                       //`--------------------------'  `--------------------------'
@@ -135,19 +131,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAV] = LAYOUT_split_3x6_3(
      XXX, XXX, XXX,  XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX,
      XXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXX, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, CW_TOGG, XXX,
-     XXX, XXX, KC_ALGR, XXX, XXX, XXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_INS, XXX,
-     KC_ESC,KC_SPC,KC_TAB,KC_ENT, KC_BSPC, KC_DEL
+     XXX, XXX, KC_ALGR, KC_ESC, KC_SPC, KC_TAB, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_INS, XXX,
+     KC_ESC, KC_SPC, KC_TAB,KC_ENT, KC_BSPC, KC_DEL
   ),
 
     [MOU] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
      XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXX, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXX, XXX, XXX,
+     XXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXX, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     XXX, KC_ALGR,           XXX,    XXX, XXX, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXX, XXX, XXX,
+     XXX, KC_ALGR,           KC_ESC,KC_SPC,KC_TAB, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, XXX, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-     KC_ESC,KC_SPC,KC_TAB, KC_BTN2, KC_BTN1, KC_BTN3
+     KC_ESC, KC_SPC, KC_TAB, KC_BTN2, KC_BTN1, KC_BTN3
                                       //`--------------------------'  `--------------------------'
     ),
 
@@ -159,7 +155,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      XXX, KC_TILD, KC_EXLM, KC_AT, KC_HASH, KC_PIPE, XXX,              XXX,    XXX, KC_ALGR, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-     KC_LPRN, KC_RPRN, KC_UNDS, XXX, XXX, XXX
+     KC_LPRN, KC_RPRN, KC_UNDS, KC_ENT, KC_BSPC, KC_DEL
                                       //`--------------------------'  `--------------------------'
     ),
 
@@ -171,7 +167,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
           XXX, KC_GRV, KC_1, KC_2, KC_3, KC_BSLS,                          XXX, KC_ENT, KC_BSPC, KC_DEL, KC_ALGR,     XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
- KC_DOT, KC_0, KC_MINS,      L_SYM,   L_NUM,   L_FUN
+ KC_DOT, KC_0, KC_MINS,      KC_ENT, KC_BSPC, KC_DEL
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -183,7 +179,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
      XXX, KC_F10, KC_F1, KC_F2, KC_F3, KC_PAUS, XXX,              XXX,    XXX, KC_ALGR, XXX, XXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-	KC_APP, KC_SPC, KC_TAB, XXX, XXX, XXX
+	KC_APP, KC_SPC, KC_TAB, KC_ENT, KC_BSPC, KC_DEL
                                       //`--------------------------'  `--------------------------'
     ),
 
