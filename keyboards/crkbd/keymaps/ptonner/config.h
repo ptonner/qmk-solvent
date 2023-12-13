@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Flow
 #define FLOW_COUNT 12
-#define FLOW_LAYERS_COUNT 1
+#define FLOW_LAYERS_COUNT 6
 
 // Oneshot
 // #define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
